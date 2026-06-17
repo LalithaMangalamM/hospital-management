@@ -2,7 +2,6 @@ class CreateDoctorProfiles < ActiveRecord::Migration[8.0]
   def change
     create_table :doctor_profiles do |t|
       t.references :doctor, null: false, foreign_key: true
-      t.text :bio
       t.integer :experience_years
       t.string :qualifications
       t.string :languages_spoken

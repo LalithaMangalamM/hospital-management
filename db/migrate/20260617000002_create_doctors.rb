@@ -6,14 +6,9 @@ class CreateDoctors < ActiveRecord::Migration[8.0]
       t.string :last_name, null: false
       t.string :email, null: false
       t.string :phone
-      t.string :specialization
-      t.string :license_number
       t.boolean :active, default: true
 
       t.timestamps
     end
-
-    add_index :doctors, :email, unique: true
-    add_index :doctors, :license_number, unique: true
   end
 end
