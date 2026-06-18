@@ -1,4 +1,4 @@
 class Hospital < ApplicationRecord
 
-  has_many :doctors, dependent: :destroy
+  has_and_belongs_to_many :doctors
 end
